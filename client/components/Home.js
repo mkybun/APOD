@@ -13,7 +13,6 @@ import LikeButton from './LikeButton';
 
 export default function Home(props) {
   const [photoOfDay, setPhoto] = useState([]);
-  const [onePhoto, setOnePhoto] = useState({})
   const [selectedStartDate, setSelectedStartDate] = useState(new Date());
   const [selectedEndDate, setSelectedEndDate] = useState(new Date());
   const [likedPhotos, updateLikedPhotos] = useState([]);
@@ -27,10 +26,6 @@ export default function Home(props) {
     date = format(date, 'yyyy-MM-dd');
     setSelectedEndDate(date);
   };
-
-  // console.log('START', selectedStartDate, 'END', selectedEndDate)
-  // console.log('START', selectedStartDate, photoOfDay)
-
 
   useEffect(() => {
     getInitial()
@@ -57,7 +52,8 @@ export default function Home(props) {
   }, []);
 
   return (
-    <div>
+    <div className='outer'>
+    <div className='container'>
       <div>
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
           <KeyboardDatePicker
@@ -77,11 +73,12 @@ export default function Home(props) {
           />
         </MuiPickersUtilsProvider>
       </div>
+
       {photoOfDay.map((current) => {
         return (
-          <div key={current.date}>
+          <div key={current.date} className='single-photo'>
             {current.media_type === 'image' ? (
-              <img src={current.url} alt={current.title} />
+              <img className='photo' src={current.url} alt={current.title} />
             ) : (
               <iframe
                 title="video"
@@ -100,10 +97,10 @@ export default function Home(props) {
               likedPhotos={likedPhotos}
               current={current}
             />
-
           </div>
         );
       })}
-    </div>
+      </div>
+      </div>
   );
 }

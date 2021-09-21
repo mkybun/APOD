@@ -1,21 +1,54 @@
+/* fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;600&display=swap');
+
+
 body {
   font-family: sans-serif;
 }
 
-a {
-  text-decoration: none;
-}
-
-label {
+/* label {
   display: block;
 }
+*/
 
-nav a {
-  display: inline-block;
-  margin: 1em;
-}
-
+/* 
 form div {
   margin: 1em;
   display: inline-block;
+} */
+
+
+.single-photo {
+  width: 40vw;
+  font-family: 'Raleway';
+  /* display: flex;
+  justify-content: center;
+  flex-direction: column; */
+/* border-style: dotted;
+border-color: red; */
+margin: 30px;
+
+}
+
+.photo {
+  width: 40vw;
+  border-radius: 6px;
+}
+
+.container {
+  width: 50vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+  border-style: solid;
+  border-color: rgb(185, 185, 185);
+  border-width: 1px;
+}
+
+.outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

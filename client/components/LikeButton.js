@@ -13,5 +13,5 @@ export default function LikeButton(props) {
       updateLike(false);
     }
   };
-  return <button onClick={handleLike}>Like</button>;
+    return (<button onClick={handleLike}>{isLiked ? (<p>Like</p>) : (<p>LIKE</p>)}</button>)
 }
