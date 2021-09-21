@@ -2,15 +2,13 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {authenticate} from '../store'
 
-/**
- * COMPONENT
- */
+
 const AuthForm = props => {
   const {name, displayName, handleSubmit, error} = props
 
   return (
     <div>
-      <form onSubmit={handleSubmit} name={name}>
+      {/* <form onSubmit={handleSubmit} name={name}>
         <div>
           <label htmlFor="username">
             <small>Username</small>
@@ -27,7 +25,7 @@ const AuthForm = props => {
           <button type="submit">{displayName}</button>
         </div>
         {error && error.response && <div> {error.response.data} </div>}
-      </form>
+      </form> */}
     </div>
   )
 }

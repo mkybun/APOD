@@ -1,35 +1,48 @@
-import React from 'react'
-import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
-import {logout} from '../store'
+import React, { useState } from 'react';
+// import {
+//   MuiPickersUtilsProvider,
+//   KeyboardDatePicker,
+// } from '@material-ui/pickers';
+// import 'date-fns';
+// import DateFnsUtils from '@date-io/date-fns';
+// import { format } from 'date-fns';
 
-const Navbar = ({handleClick}) => (
-  <div>
-    <h1>APOD</h1>
-    <nav>
+export default function Navbar(props) {
+  // const [selectedStartDate, setSelectedStartDate] = useState(new Date());
+  // const [selectedEndDate, setSelectedEndDate] = useState(new Date());
 
-        <div>
-        </div>
-    </nav>
-    <hr />
-  </div>
-)
+  // const handleStartDateChange = (date) => {
+  //   date = format(date, 'yyyy-MM-dd');
+  //   console.log(date);
+  //   setSelectedStartDate(date);
+  // };
 
-/**
- * CONTAINER
- */
-const mapState = state => {
-  return {
-    isLoggedIn: !!state.auth.id
-  }
+  // const handleEndDateChange = (date) => {
+  //   date = format(date, 'yyyy-MM-dd');
+  //   console.log(date);
+  //   setSelectedEndDate(date);
+  // }
+
+  return (
+    <div>
+      <h1>APOD</h1>
+      {/* <MuiPickersUtilsProvider utils={DateFnsUtils}>
+        <KeyboardDatePicker
+          label="Start Date"
+          minDate={'1995-06-16'}
+          value={selectedStartDate}
+          onChange={handleStartDateChange}
+          handlestartdatechange={handleStartDateChange}
+        />
+        <KeyboardDatePicker
+          label="End Date"
+          maxDate={new Date()}
+          value={selectedEndDate}
+          onChange={handleEndDateChange}
+        />
+      </MuiPickersUtilsProvider> */}
+      <nav></nav>
+      <hr />
+    </div>
+  );
 }
-
-const mapDispatch = dispatch => {
-  return {
-    handleClick() {
-      dispatch(logout())
-    }
-  }
-}
-
-export default connect(mapState, mapDispatch)(Navbar)
