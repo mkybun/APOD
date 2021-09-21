@@ -1,43 +1,31 @@
 /* fonts  */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;600&display=swap');
 
-
-
 body {
   font-family: sans-serif;
-
 }
-
-/* label {
-  display: block;
-}
-*/
-
-/* 
-form div {
-  margin: 1em;
-  display: inline-block;
-} */
-
 
 .single-photo {
   width: 40vw;
   font-family: 'Raleway';
-  /* display: flex;
-  justify-content: center;
-  flex-direction: column; */
-border-style: solid;
-border-color: rgb(77, 72, 72);
-border-radius: 6px;
-border-width: 1px;
-margin: 30px;
-padding:10px;
-background-color: rgb(253, 253, 253);
+  border-style: solid;
+  border-color: rgb(179, 175, 175);
+  border-radius: 6px;
+  border-width: 1px;
+  margin: 30px;
+  padding: 10px;
+  background-color: rgb(253, 253, 253);
+  filter: drop-shadow(0 0 0.5rem rgb(97, 96, 96));
 }
 
 .photo {
-  width: 40vw;
+  width: 100%;
   border-radius: 6px;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
 }
 
 .container {
@@ -46,13 +34,13 @@ background-color: rgb(253, 253, 253);
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; 
+  flex-direction: column;
   border-style: solid;
-  border-color: rgb(185, 185, 185);
+  border-color: rgb(211, 210, 210);
   border-width: 1px;
   border-radius: 5px;
-  background-color: rgb(198, 198, 204);
-
+  background-color: rgb(218, 218, 221);
+  filter: drop-shadow(0 0 0.3rem rgb(148, 148, 148));
 }
 
 .outer {
@@ -72,7 +60,22 @@ background-color: rgb(253, 253, 253);
   justify-content: center;
   font-family: 'Raleway';
   font-size: 3em;
-  font-weight: 600;
+  font-weight: 400;
+  margin-bottom: 0px;
+  margin-top: 8px;
+}
+
+.subtext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Raleway';
+  font-size: 0.75em;
+  font-weight: 300;
+  color: rgb(97, 96, 96);
+  margin-top: 0;
+  margin-bottom: 2px;
+  padding: 3px;
 }
 
 .likebutton {
@@ -83,4 +86,28 @@ background-color: rgb(253, 253, 253);
   border-width: 1px;
   border-radius: 4px;
   margin: 0;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  60%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+
+  80% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+.likebutton:hover {
+  animation: bounce 1s;
 }

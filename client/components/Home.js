@@ -80,13 +80,14 @@ export default function Home(props) {
             {current.media_type === 'image' ? (
               <img className='photo' src={current.url} alt={current.title} />
             ) : (
-              <iframe
+                <iframe
+                className='video'
                 title="video"
                 src={current.url}
                 frameBorder="0"
                 allow="encrypted-media"
                 allowFullScreen
-              />
+                  />
             )}
 
             <h1>{current.title}</h1>
