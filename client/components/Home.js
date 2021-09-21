@@ -54,7 +54,7 @@ export default function Home(props) {
   return (
     <div className='outer'>
     <div className='container'>
-      <div>
+      <div className='calendars'>
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
           <KeyboardDatePicker
             label="Start Date"

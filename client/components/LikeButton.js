@@ -13,5 +13,5 @@ export default function LikeButton(props) {
       updateLike(false);
     }
   };
-    return (<button onClick={handleLike}>{isLiked ? (<p>Like</p>) : (<p>LIKE</p>)}</button>)
+    return (<button className='likebutton' onClick={handleLike}>{isLiked ? (<img src='https://i.ibb.co/zbLHqdN/filled-heart.png'/>) : (<img src ='https://i.ibb.co/1J1nfpn/heart.png' />)}</button>)
 }

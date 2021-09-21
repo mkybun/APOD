@@ -2,8 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;600&display=swap');
 
 
+
 body {
   font-family: sans-serif;
+
 }
 
 /* label {
@@ -24,10 +26,13 @@ form div {
   /* display: flex;
   justify-content: center;
   flex-direction: column; */
-/* border-style: dotted;
-border-color: red; */
+border-style: solid;
+border-color: rgb(77, 72, 72);
+border-radius: 6px;
+border-width: 1px;
 margin: 30px;
-
+padding:10px;
+background-color: rgb(253, 253, 253);
 }
 
 .photo {
@@ -45,10 +50,37 @@ margin: 30px;
   border-style: solid;
   border-color: rgb(185, 185, 185);
   border-width: 1px;
+  border-radius: 5px;
+  background-color: rgb(198, 198, 204);
+
 }
 
 .outer {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.calendars {
+  margin: 5px;
+  padding: 5px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Raleway';
+  font-size: 3em;
+  font-weight: 600;
+}
+
+.likebutton {
+  width: 5vw;
+  height: 6vh;
+  background-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  margin: 0;
 }
