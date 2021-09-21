@@ -5,6 +5,13 @@ body {
   font-family: sans-serif;
 }
 
+#link {
+  font-size: 1.2em;
+}
+
+#link:hover {
+  color:blue;
+}
 .single-photo {
   width: 40vw;
   font-family: 'Raleway';
